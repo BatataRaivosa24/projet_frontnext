@@ -5,3 +5,16 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
+// next.config.js
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/dashboard',
+        destination: '/painel',
+        permanent: true, // 301 redirect
+      },
+    ]
+  },
+}
